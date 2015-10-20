@@ -17,8 +17,11 @@ public class TennisGame
 	}
 
 	public void playerOneScore() {
-		this.score = "Fifteen-love";
+		this.score = "Fifteen-Love";
 	}
-	
+
+	public void playerTwoScore() {
+		this.score = "Love-Fifteen";
+	}
 	
 }
