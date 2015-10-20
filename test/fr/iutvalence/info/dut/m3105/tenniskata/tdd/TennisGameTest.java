@@ -20,7 +20,14 @@ public class TennisGameTest
 	{
 		TennisGame tennisGame = new TennisGame();
 		tennisGame.playerOneScore();
-		assertEquals(tennisGame.getScore(), "Fifteen-love");
+		assertEquals(tennisGame.getScore(), "Fifteen-Love");
 	}
 
+	@Test
+	public void playerTwoScoreAfterBeginning()
+	{
+		TennisGame tennisGame = new TennisGame();
+		tennisGame.playerTwoScore();
+		assertEquals(tennisGame.getScore(), "Love-Fifteen");
+	}
 }
