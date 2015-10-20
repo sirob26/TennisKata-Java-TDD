@@ -58,4 +58,17 @@ public class TennisGameTest
 		assertEquals(getScoreTennisGame(), "Fifteen-all");
 	}
 	
+	@Test
+	public void scoreAfterSomeBalls(){
+		newTennisGame();
+		p2Score();
+		assertEquals(getScoreTennisGame(), "Love-Fifteen");
+		p1Score();
+		assertEquals(getScoreTennisGame(), "Fifteen-all");
+		p1Score();
+		assertEquals(getScoreTennisGame(), "Thirty-Fifteen");
+		p1Score();
+		assertEquals(getScoreTennisGame(), "Forty-Fifteen");
+	}
+	
 }
