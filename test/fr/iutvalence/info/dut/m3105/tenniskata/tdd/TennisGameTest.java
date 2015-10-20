@@ -11,8 +11,16 @@ public class TennisGameTest
 	@Test
 	public void aSimpleBeginningTest()
 	{
-		TennisGame tenisGame = new TennisGame();
-		assertEquals(tenisGame.score, "Love-all");
+		TennisGame tennisGame = new TennisGame();
+		assertEquals(tennisGame.score, "Love-all");
+	}
+	
+	@Test
+	public void playerOneScoreAfterBeginning()
+	{
+		TennisGame tennisGame = new TennisGame();
+		tennisGame.playerOneScore();
+		assertEquals(tennisGame.score, "Fifteen-love");
 	}
 
 }
