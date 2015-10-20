@@ -71,4 +71,15 @@ public class TennisGameTest
 		assertEquals(getScoreTennisGame(), "Forty-Fifteen");
 	}
 	
+	@Test
+	public void Deuce(){
+		newTennisGame();
+		p1Score();
+		p1Score();
+		p1Score();
+		p2Score();
+		p2Score();
+		p2Score();
+		assertEquals(getScoreTennisGame(), "Deuce");
+	}
 }
