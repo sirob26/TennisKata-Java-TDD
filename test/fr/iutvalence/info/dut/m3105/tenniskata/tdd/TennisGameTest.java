@@ -8,17 +8,24 @@ import org.junit.Test;
 
 public class TennisGameTest
 {
+	private TennisGame tennisGame ;
+	
+	private void newTennisGame(){
+		this.tennisGame = new TennisGame();
+	}
+	
+	
 	@Test
 	public void newTennisGameAndScoreequalsLoveAll()
 	{
-		TennisGame tennisGame = new TennisGame();
+		newTennisGame();
 		assertEquals(tennisGame.getScore(), "Love-all");
 	}
 	
 	@Test
 	public void playerOneScoreAfterBeginning()
 	{
-		TennisGame tennisGame = new TennisGame();
+		newTennisGame();
 		tennisGame.playerOneScore();
 		assertEquals(tennisGame.getScore(), "Fifteen-Love");
 	}
@@ -26,8 +33,10 @@ public class TennisGameTest
 	@Test
 	public void playerTwoScoreAfterBeginning()
 	{
-		TennisGame tennisGame = new TennisGame();
+		newTennisGame();
 		tennisGame.playerTwoScore();
 		assertEquals(tennisGame.getScore(), "Love-Fifteen");
 	}
+	
+
 }
