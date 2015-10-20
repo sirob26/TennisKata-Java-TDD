@@ -14,37 +14,48 @@ public class TennisGameTest
 		this.tennisGame = new TennisGame();
 	}
 	
+	private String getScoreTennisGame(){
+		return this.tennisGame.getScore();
+	}
+	
+	private void p1Score(){
+		this.tennisGame.playerOneScore();
+	}
+	
+	private void p2Score(){
+		this.tennisGame.playerTwoScore();
+	}
 	
 	@Test
 	public void newTennisGameAndScoreequalsLoveAll()
 	{
 		newTennisGame();
-		assertEquals(tennisGame.getScore(), "Love-all");
+		assertEquals(getScoreTennisGame(), "Love-all");
 	}
 	
 	@Test
 	public void playerOneScoreAfterBeginning()
 	{
 		newTennisGame();
-		tennisGame.playerOneScore();
-		assertEquals(tennisGame.getScore(), "Fifteen-Love");
+		p1Score();
+		assertEquals(getScoreTennisGame(), "Fifteen-Love");
 	}
 
 	@Test
 	public void playerTwoScoreAfterBeginning()
 	{
 		newTennisGame();
-		tennisGame.playerTwoScore();
-		assertEquals(tennisGame.getScore(), "Love-Fifteen");
+		p2Score();
+		assertEquals(getScoreTennisGame(), "Love-Fifteen");
 	}
 	
 	@Test
 	public void equality()
 	{
 		newTennisGame();
-		tennisGame.playerTwoScore();
-		tennisGame.playerOneScore();
-		assertEquals(tennisGame.getScore(), "Fifteen-all");
+		p2Score();
+		p1Score();
+		assertEquals(getScoreTennisGame(), "Fifteen-all");
 	}
 	
 }
