@@ -14,8 +14,12 @@ public class TennisGame
 	}
 
 	public String getScore() {
-		if(this.scorePlayerOne == this.scorePlayerTwo)
-			return scoreTable[this.scorePlayerOne] +"-all";
+		if(this.scorePlayerOne == this.scorePlayerTwo){
+			if (this.scorePlayerOne == 3 & this.scorePlayerTwo == 3) 
+				return "Deuce";
+			else
+				return scoreTable[this.scorePlayerOne] +"-all";
+		}
 		else
 			return scoreTable[this.scorePlayerOne] +"-"+ scoreTable[this.scorePlayerTwo];
 	}
