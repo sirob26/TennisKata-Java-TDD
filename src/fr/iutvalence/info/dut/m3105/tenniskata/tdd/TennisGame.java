@@ -3,6 +3,10 @@ public class TennisGame
 {
 
 	public String score = "Love-all";
+
+	public void playerOneScore() {
+		this.score = "Fifteen-love";
+	}
 	
 	
 }
