@@ -9,10 +9,10 @@ import org.junit.Test;
 public class TennisGameTest
 {
 	@Test
-	public void aSimpleBeginningTest()
+	public void newTennisGameAndScoreequalsLoveAll()
 	{
 		TennisGame tennisGame = new TennisGame();
-		assertEquals(tennisGame.score, "Love-all");
+		assertEquals(tennisGame.getScore(), "Love-all");
 	}
 	
 	@Test
@@ -20,7 +20,7 @@ public class TennisGameTest
 	{
 		TennisGame tennisGame = new TennisGame();
 		tennisGame.playerOneScore();
-		assertEquals(tennisGame.score, "Fifteen-love");
+		assertEquals(tennisGame.getScore(), "Fifteen-love");
 	}
 
 }
